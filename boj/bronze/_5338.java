@@ -1,5 +1,4 @@
-package bronze;
-
+package boj.bronze;
 public class _5338 {
 
 	public static void main(String[] args) {

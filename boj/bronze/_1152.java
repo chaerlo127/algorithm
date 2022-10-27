@@ -1,4 +1,4 @@
-package bronze;
+package boj.bronze;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;

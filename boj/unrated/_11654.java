@@ -1,4 +1,4 @@
-package unrated;
+package boj.unrated;
 
 import java.io.IOException;
 

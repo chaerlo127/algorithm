@@ -1,4 +1,4 @@
-package sliver;
+package boj.sliver;
 
 import java.util.ArrayList;
 import java.util.Collections;
