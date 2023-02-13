@@ -28,3 +28,30 @@ DFS(1)
 
 for k in range(2, N + 1):
     print(visited[k])
+
+# 원래 접근 방법
+# import sys
+#
+# sys.setrecursionlimit(10**9)  # 메모리 늘리기
+#
+# N = int(sys.stdin.readline())
+# graph = [[0] * (N + 1) for _ in range(N + 1)] # 인접 행렬
+# visited = [0 for _ in range(N + 1)]
+#
+# for i in range(N - 1):
+#     x, y = map(int, sys.stdin.readline().split())
+#     graph[x][y] = y
+#     graph[y][x] = x
+#
+#
+# def DFS(vertex):
+#     for j in range(1, N + 1):
+#         if visited[j] == 0 and graph[vertex][j] != 0:
+#             visited[j] = vertex
+#             DFS(j)
+#
+#
+# DFS(1)
+#
+# for k in range(2, N + 1):
+#     print(visited[k])
