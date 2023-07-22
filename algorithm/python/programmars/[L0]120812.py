@@ -4,7 +4,7 @@
 
 # 풀이
 # 최댓 값을 찾되, 같은 값이 여러개 이나 최빈 값이 하나인 경우를 생각을 해야 함.
-#
+
 def solution(array):
     max = 0
     answer = 0
@@ -18,3 +18,14 @@ def solution(array):
         elif max == countI and answer != i:
             answer = -1
     return answer
+
+
+# 프로그래머스 다른 사람 풀이
+# set은 집합으로, 중복된 원소를 가질 수 없음
+# enumerate -> index 와 원소를 동시에 사용 가능
+def solution2(array):
+    while len(array) != 0:
+        for i, a in enumerate(set(array)):
+            array.remove(a) # 중복된 원소를 제거한 후, array에 값 삭제
+        if i == 0: return a # 최빈값이 2개 이상이 아니라면 return
+    return -1
