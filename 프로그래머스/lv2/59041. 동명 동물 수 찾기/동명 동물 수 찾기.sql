@@ -1,4 +1,3 @@
--- 코드를 입력하세요
 SELECT NAME, count(NAME) as COUNT
 from ANIMAL_INS
 group by NAME
