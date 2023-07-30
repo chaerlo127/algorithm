@@ -27,7 +27,8 @@ while True:
     check = False
 
     # 계산 로직
-    for i in range(3, n, 2):
+    for i in range(3, n, 2): 
+        # 문제 해결 => 3~n까지 +1씩 확인하지 않고 +2씩 확인함. 
         if lists[i] and lists[n - i]:
             print(str(n) + " = " + str(i) + " + " + str(n - i))
             check = True
