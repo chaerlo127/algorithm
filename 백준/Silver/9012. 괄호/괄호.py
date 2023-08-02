@@ -1,15 +1,22 @@
-def stack(n):
-    stack = []
-    for i in n:
-        if(i == '('): stack.append('(')
-        elif len(stack) == 0: return "NO"
-        else: stack.pop()
-    
-    if len(stack) == 0: return "YES"
-    else: return "NO"
+import sys
 
-n = int(input())
 
+def answer(s):
+    k = []
+    for i in s:
+        if i == '(':
+            k.append(i)
+        elif len(k) == 0:
+            return "NO"
+        else:
+            k.pop()
+    if len(k) == 0:
+        return "YES"
+    else:
+        return "NO"
+
+
+n = int(sys.stdin.readline())
 for _ in range(n):
-    answer = input()
-    print(stack(list(answer)))
+    stack = list(sys.stdin.readline().strip()) # /n 제거
+    print(answer(stack))
