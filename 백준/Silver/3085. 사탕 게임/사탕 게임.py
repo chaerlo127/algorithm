@@ -3,6 +3,9 @@ def checkColumn():
     for i in range(n):
         cMax = 1
         for j in range(n - 1):
+            # 에러 원인 
+            # 값을 더한후, 마지막에 for 문 밖에서 max 값을 살펴봄
+            # 즉, 겹쳐진 사탕 이후, 다른 사탕이 나온 경우 else 와 같이 초기화를 진행해야하는데 진행을 하지 않아서 에러 발생 => 해결 완
             if lists[i][j] == lists[i][j+1]:
                 cMax += 1
                 maxValue = max(cMax, maxValue)
