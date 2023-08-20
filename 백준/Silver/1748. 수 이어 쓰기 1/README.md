@@ -1,4 +1,11 @@
 # [Silver IV] 수 이어 쓰기 1 - 1748 
+## 정리
+- 자릿수를 구하기 위해 len을 쓰기 위해서는, str 형으로 사용을 해야함.
+먼저 str 형으로 값을 받고, 이후에 계산을 진행할 때 Int 형으로 형변환이 필요
+- sys를 import 받아 `sys.stdin.readline()` 을 사용하면 enter까지 자릿수로 인식하여 실제 자릿수 + 1로 인식이 됨 
+`sys.stdin.readline().strip()` 을 사용하여 앞 뒤의 공백을 없애고 진행
+- 각 자릿수를 구하는 공식 자릿수를 i로 하면 (1의 자릿수, 10의 자릿수, 100의 자릿수)
+`9 * 10 ^ (i-1) * i`
 
 [문제 링크](https://www.acmicpc.net/problem/1748) 
 
