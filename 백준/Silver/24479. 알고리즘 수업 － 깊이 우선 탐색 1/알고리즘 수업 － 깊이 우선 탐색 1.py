@@ -22,7 +22,7 @@ for _ in range(1, m + 1):
 def dfs(v):
     global count
     visited[v] = count  # 방문한 순서를 표시
-    l[v].sort()
+    l[v].sort() # 이 부분을 따로 함수를 만들지 않고 dfs 내부에서 실행하니 런타임에러(IndexError) 해결이 됨 왜 그런지는 모르겟음
     for j in l[v]:
         if visited[j] == 0:  # 방문하지 않은 곳은 방문 진행
             count += 1
