@@ -1,35 +1,41 @@
 import sys
 
-N = int(sys.stdin.readline())
-# tree 생성
-tree = {}  # Dictionary
-for _ in range(N):
-    root, left, right = sys.stdin.readline().split()
-    tree[root] = [left, right]
+n = int(sys.stdin.readline())
+l = {}
+for _ in range(n):
+    x, y, z = sys.stdin.readline().strip().split()
+    l[x] = [y, z]  # root, left, right 순
 
 
-def preorder(alpa):
-    if alpa == '.':
-        return
-    print(alpa, end="")
-    preorder(tree[alpa][0])
-    preorder(tree[alpa][1])
+def preorder(k):
+    if k != ".":
+        # root
+        print(k, end='')
+        # left
+        preorder(l[k][0])
+        # right
+        preorder(l[k][1])
 
 
-def inorder(alpa):
-    if alpa == '.':
-        return
-    inorder(tree[alpa][0])
-    print(alpa, end="")
-    inorder(tree[alpa][1])
+def inorder(k):
+    if k != ".":
+        # left
+        inorder(l[k][0])
+        # root
+        print(k, end='')
+        # right
+        inorder(l[k][1])
 
 
-def postorder(alpa):
-    if alpa == '.':
-        return
-    postorder(tree[alpa][0])
-    postorder(tree[alpa][1])
-    print(alpa, end="")
+def postorder(k):
+    # print
+    if k != ".":
+        # left
+        postorder(l[k][0])
+        # right
+        postorder(l[k][1])
+        # root
+        print(k, end='')
 
 
 preorder('A')
