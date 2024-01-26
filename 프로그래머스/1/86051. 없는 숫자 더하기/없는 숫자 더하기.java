@@ -2,7 +2,7 @@ class Solution {
     public int solution(int[] numbers) {
         boolean[] visited = new boolean[10];
         for (int number : numbers){
-            if(!visited[number]) visited[number] = true;
+            visited[number] = true;
         }
         int answer = -1;
         
